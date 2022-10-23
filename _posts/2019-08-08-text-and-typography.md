@@ -1,5 +1,5 @@
 ---
-title: 😠 Catch them All!
+title: 🌟 Catch them all!
 author: ahmed
 date: 2019-08-08 11:33:00 +0800
 categories: [Blogging, Demo]
@@ -13,7 +13,9 @@ image:
   alt: Responsive rendering of Chirpy theme on multiple devices.
 ---
 
-Did you ever come a feature when you have to use `try-catch` for all the methods in your class ? 
+Did you ever come a feature when you have to use `try-catch` for all the methods in your class ? No ? Bro!! C'Mon.  
+
+Ok, I guess I'll write it anyway 🤷‍♂️.
 
 
 ## Titles
