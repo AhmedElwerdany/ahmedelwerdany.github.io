@@ -31,6 +31,8 @@ and I ended up with something like this:
 
 ```javascript
   class Repos {
+    constructor () {...}
+
     async getContent (repo, owner, path) {
       try {
         const response = await fetch('/repos', { repo, owner, path })
@@ -45,6 +47,11 @@ and I ended up with something like this:
         }
       }
     }
+
+    async getIssueCount (repo) {...}
+    async getPrCount (repo) {...}
+    async getLastActive (user) {...}
+    ...
   }
 ```
 
