@@ -19,15 +19,15 @@ timezone: Asia/Shanghai
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Chirpy                          # the main title
+title: Xcoder7                          # the main title
 
-tagline: A text-focused Jekyll theme   # it will display as the sub-title
+tagline: Writing whatever makes me look cleaver    # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  A minimal, responsive, and powerful Jekyll theme for presenting professional writing.
+  A blog about Writing interesting tools with different languages, solving ctfs, and much more.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: ''
+url: 'https://ahmedelwerdany.github.io'
 
 github:
   username: AhmedElwerdany             # change to your github username
@@ -78,10 +78,10 @@ theme_mode:   # [light|dark]
 # will be added to all image (site avatar & posts' images) paths starting with '/'
 #
 # e.g. 'https://cdn.com'
-img_cdn: 'https://raw.githubusercontent.com/cotes2020/chirpy-images/main'
+img_cdn: 'https://raw.githubusercontent.com/ahmedelwerdany/blog/master'
 
 # the avatar on sidebar, support local or CORS resources
-avatar: '/commons/avatar.jpg'
+avatar: '/images/avatar.png'
 
 # boolean type, the global switch for ToC in posts.
 toc: true
