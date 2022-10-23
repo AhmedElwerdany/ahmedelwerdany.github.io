@@ -1,22 +1,52 @@
 ---
 title: 🌟 Catch them all!
-author: ahmed
+author: Ahmed
 date: 2019-08-08 11:33:00 +0800
 categories: [Blogging, Demo]
 tags: [javascript,tips]
 math: true
 mermaid: true
-image:
-  path: /commons/devices-mockup.png
-  width: 800
-  height: 500
-  alt: Responsive rendering of Chirpy theme on multiple devices.
+# image:
+#   path: /commons/devices-mockup.png
+#   width: 800
+#   height: 500
+#   alt: Responsive rendering of Chirpy theme on multiple devices.
 ---
 
-Did you ever come a feature when you have to use `try-catch` for all the methods in your class ? No ? Bro!! C'Mon.  
+Did you ever come across a feature when you have to use `try-catch` for all the methods in your class? No? Bro!! C'Mon.  
 
 Ok, I guess I'll write it anyway 🤷‍♂️.
 
+I had this class which has some methods to deal with github repos; 
+- fetch some repos
+- get the count of the issues 
+- get the count of the pull-requests
+- when was the last the user did some event to github; commit, open an issue, etc...
+
+and if you have ever used GitHub Api, you will know that they have a **rate limit**; you have only 60 requests within 1 min for each scope. and my internet is a little bit faster than that, you know 😅.
+
+So, first I need to write some code to deal wtih `status: 403` responses and **retry** again until it passes.
+
+and I ended up with something like this:
+
+```javascript
+  class Repos {
+    async getContent (repo, owner, path) {
+      try {
+        const response = await fetch('/repos', { repo, owner, path })
+        const { data } = response
+        const { content } = data
+
+        return content
+      } catch(err) {
+        if (err.status === 403) {
+          await delay(10) // wait 10 seconds before you try again.
+          return await this.getContent(repo, owner, path) // run the function again
+        }
+      }
+    }
+  }
+```
 
 ## Titles
 ---
