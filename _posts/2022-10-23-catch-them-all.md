@@ -1,7 +1,7 @@
 ---
 title: 🌟 Catch them all!
 author: Ahmed
-date: 2019-08-08 11:33:00 +0800
+date: 2022-10-23 11:33:00 +0800
 categories: [Blogging, Demo]
 tags: [javascript,tips]
 math: true
