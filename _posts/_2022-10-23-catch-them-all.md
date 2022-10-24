@@ -1,5 +1,5 @@
 ---
-title: 🌟 Catch them all!
+title: 🤏 Catch them all!
 author: Ahmed
 date: 2022-10-23 11:33:00 +0800
 categories: [Blogging, Demo]

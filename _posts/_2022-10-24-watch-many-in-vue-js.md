@@ -13,7 +13,7 @@ mermaid: true
 #   alt: Responsive rendering of Chirpy theme on multiple devices.
 ---
 
-Let me give you a quick headach first.
+ok, Let me start by giving you a quick headache.
 
 ```js
 export default {
