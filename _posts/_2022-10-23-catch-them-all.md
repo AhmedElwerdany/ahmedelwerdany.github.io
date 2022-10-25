@@ -1,5 +1,5 @@
 ---
-title: 🤏 Catch them all!
+title: 🤏 One Catch to rule them all.
 author: Ahmed
 date: 2022-10-23 11:33:00 +0800
 categories: [Blogging, Demo]
@@ -13,25 +13,15 @@ mermaid: true
 #   alt: Responsive rendering of Chirpy theme on multiple devices.
 ---
 
-Did you ever come across a feature when you have to use `try-catch` for all the methods in your class? No? Bro!! C'Mon.  
+Did you ever come across a feature when you have to use `try-catch` statment for all the methods in your class? No? Bro!! C'Mon.  
 
-Ok, I guess I'll write it anyway 🤷‍♂️.
+Alright, I did and here's my code .
 
-I had this class which has some methods to deal with github repos; 
-- fetch some repos
-- get the count of the issues 
-- get the count of the pull-requests
-- when was the last the user did some event to github; commit, open an issue, etc...
-
-and if you have ever used GitHub Api, you will know that they have a **rate limit**; you have only 60 requests within 1 min for each scope. and my internet is a little bit faster than that, you know 😅.
-
-So, first I need to write some code to deal wtih `status: 403` responses and **retry** again until it passes.
-
-and I ended up with something like this:
+## The problem
 
 ```javascript
-  class Repos {
-    constructor () {...}
+  class Repository {
+    constructor (name) {...}
 
     async getContent (repo, owner, path) {
       try {
@@ -54,181 +44,70 @@ and I ended up with something like this:
     ...
   }
 ```
+Let me explain what I'm trying to do here;
+This is a Class _(you know that of course)_ that contains some methods to help me get important data of a spcific  **GitHub Repository** using [GitHub Api](https://docs.github.com/en/rest)
 
-## Titles
----
-# H1 - heading
+And there's an important thing that they share in common; **Rate Limit**.
 
-<h2 data-toc-skip>H2 - heading</h2>
+### Retry
 
-<h3 data-toc-skip>H3 - heading</h3>
+One way to solve the rate limit issue _(and the bad way too🤫 )_ is to keep retrying.
+So, I did.
 
-<h4>H4 - heading</h4>
----
-<br>
+```js
+catch(err) {
+	if (err.status === 403) {
+	
+	  // wait 10 seconds before you try again.
+	  await delay(10)
+	  // run the function again
+	  return await this.getContent(repo, owner, path)
+	  
+    }
+}
+```
+If the status is _403_ then you should try again. _(keep in mind that this in not a good way to check the error, but **you should** check the message too)_; if the error is not a rate limit, I could retry for ever. 
 
-## Paragraph
+Ok, Snap back to reality, ope there goes gravity  Ope, the...  ok i'll stop 😔 
 
-Quisque egestas convallis ipsum, ut sollicitudin risus tincidunt a. Maecenas interdum malesuada egestas. Duis consectetur porta risus, sit amet vulputate urna facilisis ac. Phasellus semper dui non purus ultrices sodales. Aliquam ante lorem, ornare a feugiat ac, finibus nec mauris. Vivamus ut tristique nisi. Sed vel leo vulputate, efficitur risus non, posuere mi. Nullam tincidunt bibendum rutrum. Proin commodo ornare sapien. Vivamus interdum diam sed sapien blandit, sit amet aliquam risus mattis. Nullam arcu turpis, mollis quis laoreet at, placerat id nibh. Suspendisse venenatis eros eros.
+So, should you _copy-paste_ the the code all over the others methods? did you ever consider how whould they feel about it ? 
 
-## Lists
+The answer is *No*; becuse there's a better way to handle it.
 
-### Ordered list
+and here it is.
 
-1. Firstly
-2. Secondly
-3. Thirdly
+### Proxy
 
-### Unordered list
+```javascript
+// target : your shiny class
+function catchUs (target) {
+	return new Proxy(target, classHandler)
+}
+```
+That EASY ? - of course No 🙄  
+Let me explain what `Proxy` is, then we will write the  `classHandler` togother.
 
-- Chapter
-  + Section
-    * Paragraph
+[MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy): 
+> The `Proxy` object allows you to create an object that can be used in place of the original object, but which may redefine fundamental `Object` operations like getting, setting, and defining properties.
 
-### ToDo list
+**Q**: What dose this can help you for ?   
+**A**: You can tell your beatiful ✨ object when someone ask you for a property.   
+![x](/images/posts/one-catch-to-rule-them-all/proxy.png){: w="500" h="400" }
+_poor proxy 😢_
+- check the date first, is it 9AM in the morning ? I am in a good mood give him what he want. is it  1PM afternoon.. hmmm it's hot i am not in good mood for this !
+- check the localization.<br />is it `ar` ? then return the number in arabic format e.g. (١, ٢, ٣).<br> is it `en` ? then return it in the english format e.g. (123)
 
-- [ ] Job
-  + [x] Step 1
-  + [x] Step 2
-  + [ ] Step 3
+And you can do All the funny & intersting stuff when someone tries to set a property too. 
+But How? 
+> You create a  `Proxy`  with two parameters:  
+	•  `target`: the original object which you want to proxy  
+	•  `handler`: an object that defines which operations will be intercepted and how to redefine intercepted operations.
 
-### Description list
-
-Sun
-: the star around which the earth orbits
-
-Moon
-: the natural satellite of the earth, visible by reflected light from the sun
-
-## Block Quote
-
-> This line shows the _block quote_.
-
-## Prompts
-
-> An example showing the `tip` type prompt.
-{: .prompt-tip }
-
-> An example showing the `info` type prompt.
-{: .prompt-info }
-
-> An example showing the `warning` type prompt.
-{: .prompt-warning }
-
-> An example showing the `danger` type prompt.
-{: .prompt-danger }
-
-## Tables
-
-| Company                      | Contact          | Country |
-|:-----------------------------|:-----------------|--------:|
-| Alfreds Futterkiste          | Maria Anders     | Germany |
-| Island Trading               | Helen Bennett    | UK      |
-| Magazzini Alimentari Riuniti | Giovanni Rovelli | Italy   |
-
-## Links
-
-<http://127.0.0.1:4000>
-
-## Footnote
-
-Click the hook will locate the footnote[^footnote], and here is another footnote[^fn-nth-2].
-
-## Images
-
-- Default (with caption)
-
-![Desktop View](/posts/20190808/mockup.png){: width="972" height="589" }
-_Full screen width and center alignment_
-
-<br>
-
-- Shadow
-
-![Window shadow](/posts/20190808/window.png){: .shadow width="1548" height="864" .w-75 }
-_shadow effect (visible in light mode)_
-
-<br>
-
-- Left aligned
-
-![Desktop View](/posts/20190808/mockup.png){: width="972" height="589" .w-75 .normal}
-
-- Float to left
-
-  ![Desktop View](/posts/20190808/mockup.png){: width="972" height="589" .w-50 .left}
-  Praesent maximus aliquam sapien. Sed vel neque in dolor pulvinar auctor. Maecenas pharetra, sem sit amet interdum posuere, tellus lacus eleifend magna, ac lobortis felis ipsum id sapien. Proin ornare rutrum metus, ac convallis diam volutpat sit amet. Phasellus volutpat, elit sit amet tincidunt mollis, felis mi scelerisque mauris, ut facilisis leo magna accumsan sapien. In rutrum vehicula nisl eget tempor. Nullam maximus ullamcorper libero non maximus. Integer ultricies velit id convallis varius. Praesent eu nisl eu urna finibus ultrices id nec ex. Mauris ac mattis quam. Fusce aliquam est nec sapien bibendum, vitae malesuada ligula condimentum. Phasellus a tortor aliquam, tristique felis sit amet, elementum enim. Integer vestibulum vitae nulla nec pretium.
-
-- Float to right
-
-  ![Desktop View](/posts/20190808/mockup.png){: width="972" height="589" .w-50 .right}
-  Praesent maximus aliquam sapien. Sed vel neque in dolor pulvinar auctor. Maecenas pharetra, sem sit amet interdum posuere, tellus lacus eleifend magna, ac lobortis felis ipsum id sapien. Proin ornare rutrum metus, ac convallis diam volutpat sit amet. Phasellus volutpat, elit sit amet tincidunt mollis, felis mi scelerisque mauris, ut facilisis leo magna accumsan sapien. In rutrum vehicula nisl eget tempor. Nullam maximus ullamcorper libero non maximus. Integer ultricies velit id convallis varius. Praesent eu nisl eu urna finibus ultrices id nec ex. Mauris ac mattis quam. Fusce aliquam est nec sapien bibendum, vitae malesuada ligula condimentum. Phasellus a tortor aliquam, tristique felis sit amet, elementum enim. Integer vestibulum vitae nulla nec pretium.
-
-## Mermaid SVG
-
-```mermaid
- gantt
-  title  Adding GANTT diagram functionality to mermaid
-  apple :a, 2017-07-20, 1w
-  banana :crit, b, 2017-07-23, 1d
-  cherry :active, c, after b a, 1d
+```javascript
+const classHandler = {
+	construct (Target, args) {
+		return new Target()
+	}
+}
 ```
 
-## Mathematics
-
-The mathematics powered by [**MathJax**](https://www.mathjax.org/):
-
-$$ \sum_{n=1}^\infty 1/n^2 = \frac{\pi^2}{6} $$
-
-When $a \ne 0$, there are two solutions to $ax^2 + bx + c = 0$ and they are
-
-$$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
-
-## Inline code
-
-This is an example of `Inline Code`.
-
-## Filepath
-
-Here is the `/path/to/the/file.extend`{: .filepath}.
-
-## Code block
-
-### Common
-
-```
-This is a common code snippet, without syntax highlight and line number.
-```
-
-### Specific Languages
-
-#### Console
-
-```console
-$ env |grep SHELL
-SHELL=/usr/local/bin/bash
-PYENV_SHELL=bash
-```
-
-#### Shell
-
-```bash
-if [ $? -ne 0 ]; then
-    echo "The command was not successful.";
-    #do the needful / exit
-fi;
-```
-
-### Specific filename
-
-```sass
-@import
-  "colors/light-typography",
-  "colors/dark-typography"
-```
-{: file='_sass/jekyll-theme-chirpy.scss'}
-
-## Reverse Footnote
-
-[^footnote]: The footnote source
-[^fn-nth-2]: The 2nd footnote source
