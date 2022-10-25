@@ -6,16 +6,13 @@ categories: [Front-End]
 tags: [javascript,tips,vuejs]
 math: true
 mermaid: true
-# image:
-#   path: /commons/devices-mockup.png
-#   width: 800
-#   height: 500
-#   alt: Responsive rendering of Chirpy theme on multiple devices.
+image:
+  path: /images/posts/watch-them-all/main.webp
+  width: 800
+  height: 500
+  alt: Watch multiple values with vue.js v2 
 ---
 
-<div class="tenor-gif-embed" data-postid="11689404" data-share-method="host" data-aspect-ratio="1.85185" data-width="100%"><a href="https://tenor.com/view/aerys-targaryen-burn-them-all-got-game-of-thrones-mad-king-gif-11689404">Aerys Targaryen Burn Them All GIF</a>from <a href="https://tenor.com/search/aerys+targaryen-gifs">Aerys Targaryen GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
-
-<br/>
 Sorry, my sense of humor is Dying 😔, my skills aren’t tho.  
 So, Let's start by giving you a quick headache 😌.
 
