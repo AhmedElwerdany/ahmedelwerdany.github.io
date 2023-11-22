@@ -2,71 +2,220 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-## [5.3.0](https://github.com/cotes2020/jekyll-theme-chirpy/compare/v5.2.1...v5.3.0) (2022-09-23)
+## [3.0.0](https://github.com/satnaing/astro-paper/compare/v2.3.0...v3.0.0) (2023-09-25)
+
+
+### ⚠ BREAKING CHANGES
+
+* Astro v3
+
+> Check the AstroPaper v3 in [this blog post](https://astro-paper.pages.dev/posts/astro-paper-v3/)
+
+### Features
+
+* upgrade to astro v3 ([8fda50f](https://github.com/satnaing/astro-paper/commit/8fda50f5ddb7130b7954ad217eed1848094ee33c)), closes [#111](https://github.com/satnaing/astro-paper/issues/111)
+* add view transitions for card on search page ([#118](https://github.com/satnaing/astro-paper/issues/118)) ([b873ed5](https://github.com/satnaing/astro-paper/commit/b873ed5a07e746404960690669e8960c2a4c628d))
+* add ViewTransitions from Astro ([9703e54](https://github.com/satnaing/astro-paper/commit/9703e54ca4264b0437e06c45bbcc53a7a7d1e106)), closes [#96](https://github.com/satnaing/astro-paper/issues/96)
+([b873ed5](https://github.com/satnaing/astro-paper/commit/b873ed5a07e746404960690669e8960c2a4c628d)), closes [#96](https://github.com/satnaing/astro-paper/issues/96)
+* generate OG image using templates ([0f82206](https://github.com/satnaing/astro-paper/commit/0f822060cec82b218b568e9ef311fe6adc8b7a1e))
+* support custom canonical URLs ([#83](https://github.com/satnaing/astro-paper/issues/83)) ([4687bd5](https://github.com/satnaing/astro-paper/commit/4687bd516b16970fc4d163c1202b28f29818a582))
+* update theme-color tag on theme switch ([b5f5418](https://github.com/satnaing/astro-paper/commit/b5f54180c8645113ae4e177f3ebb97e1947dc9e2))
+* use new og images in layout ([ec3c691](https://github.com/satnaing/astro-paper/commit/ec3c69114f7344b27797853e2e5a573feb5c63fc))
+
+
+### Bug Fixes
+
+* replace SITE.website with a URL in astro.config site value ([26ecd17](https://github.com/satnaing/astro-paper/commit/26ecd173ddec1075abb6ede9bbb62572b9f74b33)), fixes [#72](https://github.com/satnaing/astro-paper/issues/72)
+* **css:** make code scrollable in code blocks ([0c92492](https://github.com/satnaing/astro-paper/commit/0c92492959bed20f144d5d949116891d61c8e098))
+* remove empty string as ogImage ([5259994](https://github.com/satnaing/astro-paper/commit/5259994525b0b67a584b4268a3fbb74258871a3a))
+* resolve single-line code block wrapping issue ([#121](https://github.com/satnaing/astro-paper/issues/121)) ([8f08018](https://github.com/satnaing/astro-paper/commit/8f0801836a589133932dc5a450060fd2f16daf74))
+* sort posts in [tag] page ([#101](https://github.com/satnaing/astro-paper/issues/101)) ([b571816](https://github.com/satnaing/astro-paper/commit/b571816dcddc72a07147389090502c09025b28a6))
+* update auto-gen OG images to allow special char usage in title ([f26bf85](https://github.com/satnaing/astro-paper/commit/f26bf8581288523a0d6021a141cdada685fbce46)), closes [#103](https://github.com/satnaing/astro-paper/issues/103) [#88](https://github.com/satnaing/astro-paper/issues/88)
+* update tailwind base styles config ([#116](https://github.com/satnaing/astro-paper/issues/116)) ([98a2bb6](https://github.com/satnaing/astro-paper/commit/98a2bb682af2773d6af7782a6592e9b9fab79b3b))
+* update title of the blog nowrap ([2df71b9](https://github.com/satnaing/astro-paper/commit/2df71b9b4587c7a2438f483e8365ef5b8a502ce7))
+
+## [2.3.0](https://github.com/satnaing/astro-paper/compare/v2.2.0...v2.3.0) (2023-05-15)
 
 
 ### Features
 
-* add multiple authors to a post ([#677](https://github.com/cotes2020/jekyll-theme-chirpy/issues/677)) ([f1d9e99](https://github.com/cotes2020/jekyll-theme-chirpy/commit/f1d9e99bc02d3cd0a6b0cd1beac545f0cc7a24f8)), closes [#675](https://github.com/cotes2020/jekyll-theme-chirpy/issues/675)
-* **i18n:** add Bulgarian support  ([#612](https://github.com/cotes2020/jekyll-theme-chirpy/issues/612)) ([2fed338](https://github.com/cotes2020/jekyll-theme-chirpy/commit/2fed338ce6d078bf528c9717201fbc475f88cd22))
-* **i18n:** add German locale file ([#663](https://github.com/cotes2020/jekyll-theme-chirpy/issues/663)) ([940b281](https://github.com/cotes2020/jekyll-theme-chirpy/commit/940b2810e95065e30600ae8d5e4612e7183da60e))
-* **i18n:** add Hungarian locale file ([#597](https://github.com/cotes2020/jekyll-theme-chirpy/issues/597), [#598](https://github.com/cotes2020/jekyll-theme-chirpy/issues/598)) ([b032977](https://github.com/cotes2020/jekyll-theme-chirpy/commit/b0329775fc24d0323e5cc04cda46ece8b4531802))
-* **i18n:** add Turkish language ([#631](https://github.com/cotes2020/jekyll-theme-chirpy/issues/631)) ([ad137fa](https://github.com/cotes2020/jekyll-theme-chirpy/commit/ad137fa2945b1870b9c1dd5e9212a5f4af7c3580))
+* add locale configuration for Datetime component ([#59](https://github.com/satnaing/astro-paper/issues/59)) ([0e9f709](https://github.com/satnaing/astro-paper/commit/0e9f709c5dbd9a75aaf33e7994e88216fd56d8be))
 
 
 ### Bug Fixes
 
-* add missing color to linkedin icon for share list ([#683](https://github.com/cotes2020/jekyll-theme-chirpy/issues/683)) ([0dcd39d](https://github.com/cotes2020/jekyll-theme-chirpy/commit/0dcd39d491c9c49e4acf7f75f83fe6e1d1839e37))
-* code contains spaces in headings ([#644](https://github.com/cotes2020/jekyll-theme-chirpy/issues/644)) ([3fa1bf3](https://github.com/cotes2020/jekyll-theme-chirpy/commit/3fa1bf305451f645a7f3aa93863b076463c8f165))
-* correct spelling of `panel` ([#686](https://github.com/cotes2020/jekyll-theme-chirpy/issues/686)) ([b288587](https://github.com/cotes2020/jekyll-theme-chirpy/commit/b288587c1c3d113a1c52c2d25fb46cddda348961))
-* correct the i18n for tab titles ([0c5b697](https://github.com/cotes2020/jekyll-theme-chirpy/commit/0c5b697fd3b283b6a5c926742b61ed49d8688c18))
-* the `code` doesn't wrap inside the prompt ([#626](https://github.com/cotes2020/jekyll-theme-chirpy/issues/626)) ([378b65a](https://github.com/cotes2020/jekyll-theme-chirpy/commit/378b65a0617787813519dde74d6f741f255eff3d))
+* add missing sitemap in head ([#69](https://github.com/satnaing/astro-paper/issues/69)) ([f6ac810](https://github.com/satnaing/astro-paper/commit/f6ac8104b2ba20de3b71eb5dde395e5adce9dfe7))
+* build error astro@2.1.4 && update astro@2.1.5 ([#49](https://github.com/satnaing/astro-paper/issues/49)) ([dd4fd98](https://github.com/satnaing/astro-paper/commit/dd4fd989722cbcb3e98045e808a32292cf555900))
+* **ignore:** added yarn directories to ignorefiles ([f3e9cd5](https://github.com/satnaing/astro-paper/commit/f3e9cd51479fd41f3c0e8863ac13c77d6daa2605))
+* replace history entries when searching ([#62](https://github.com/satnaing/astro-paper/issues/62)) ([a57f343](https://github.com/satnaing/astro-paper/commit/a57f3439f801c1d41256a8a46bd319c17dff86f1))
+* slugify tags in post detail page ([49d7f77](https://github.com/satnaing/astro-paper/commit/49d7f77a86987c00d211090301b662e21a27ce17))
+* sort rss feed from latest to oldest ([#38](https://github.com/satnaing/astro-paper/issues/38)) ([9e62b63](https://github.com/satnaing/astro-paper/commit/9e62b637e8ddb65f5f274fd0154191212dda0590))
+* tailwind jsdoc for intellisense ([99709dd](https://github.com/satnaing/astro-paper/commit/99709dd3aa2329220a497f7038b7ab069d389847))
+* update lint-staged configuration ([e654c03](https://github.com/satnaing/astro-paper/commit/e654c0308c26ccffdd0a4abc50f0adb99c76d9ca)), closes [#52](https://github.com/satnaing/astro-paper/issues/52)
+* update menu element with svg and refactor toggle logic ([0f76424](https://github.com/satnaing/astro-paper/commit/0f764242fea14565798085447d8524b4bf05f76a))
 
-## [5.2.1](https://github.com/cotes2020/jekyll-theme-chirpy/compare/v5.2.0...v5.2.1) (2022-06-17)
-
-
-### Bug Fixes
-
-* exclude CHANGELOG from output ([971fe03](https://github.com/cotes2020/jekyll-theme-chirpy/commit/971fe03ec329ae49e7d60fe3af6101cfbd1acd6c))
-* **PWA:** sometimes update notification is not triggered ([96af729](https://github.com/cotes2020/jekyll-theme-chirpy/commit/96af7291ea5b2c5ed6372e7b6f7725e67c69f1ba))
-
-## [5.2.0](https://github.com/cotes2020/jekyll-theme-chirpy/compare/v5.1.0...v5.2.0) (2022-06-09)
+## [2.2.0](https://github.com/satnaing/astro-paper/compare/v2.1.0...v2.2.0) (2023-03-16)
 
 
 ### Features
 
-* add es-ES support to locales ([#533](https://github.com/cotes2020/jekyll-theme-chirpy/issues/533)) ([efe75ad](https://github.com/cotes2020/jekyll-theme-chirpy/commit/efe75adf2784956afb7a0b67f6634b146d9cb03b))
-* add fr-FR support to locales ([#582](https://github.com/cotes2020/jekyll-theme-chirpy/issues/582)) ([94e8144](https://github.com/cotes2020/jekyll-theme-chirpy/commit/94e81447afa457b1a6b7e8f487c47502803556d7))
-* add Vietnamese locale ([#517](https://github.com/cotes2020/jekyll-theme-chirpy/issues/517)) ([171463d](https://github.com/cotes2020/jekyll-theme-chirpy/commit/171463d76da9b7bc25dd327b8f0a868ea79e388b))
-* add pt-BR support to locales ([c2c503f](https://github.com/cotes2020/jekyll-theme-chirpy/commit/c2c503f63336884282b6bda4ec0703d6ae76771b))
-* add option to turn off PWA ([#527](https://github.com/cotes2020/jekyll-theme-chirpy/issues/527)) ([106c981](https://github.com/cotes2020/jekyll-theme-chirpy/commit/106c981bac71e7434204a77e1f0c9c61d6eb1509))
-* **PWA:** add Service Worker update notification ([d127183](https://github.com/cotes2020/jekyll-theme-chirpy/commit/d127183b9774f6321e409acdb66bf8a85d8814be))
-* support showing description of preview image ([2bd6efa](https://github.com/cotes2020/jekyll-theme-chirpy/commit/2bd6efa95a174ac44e30a3af1e57e6f40d6e0e3a))
+* generate og images in png format ([#43](https://github.com/satnaing/astro-paper/issues/43)) ([27507d1](https://github.com/satnaing/astro-paper/commit/27507d1d78531901c20a17d9ce72728c6cbb521e)), closes [#40](https://github.com/satnaing/astro-paper/issues/40)
 
 
 ### Bug Fixes
 
-* alt is not a valid attribute for 'a' tag ([58928db](https://github.com/cotes2020/jekyll-theme-chirpy/commit/58928dbc9068db4e4cda4371eeae1865920dce6a))
-* assets URL is missing `baseurl` in self-hosted mode ([#591](https://github.com/cotes2020/jekyll-theme-chirpy/issues/591)) ([54124d5](https://github.com/cotes2020/jekyll-theme-chirpy/commit/54124d5134995fce52e4c2fc0a5d4d1743d6264d))
-* correct the `twitter:creator` of Twitter summary card ([96a16c8](https://github.com/cotes2020/jekyll-theme-chirpy/commit/96a16c868ede51e7dfa412de63ffa1e5a49add7f))
-* correctly URL encode share links ([4c1c8d8](https://github.com/cotes2020/jekyll-theme-chirpy/commit/4c1c8d8b0eacecbbaa2d522bbdd6430f350ff760)), closes [#496](https://github.com/cotes2020/jekyll-theme-chirpy/issues/496)
-* follow paginate_path config for pagination ([6900d9f](https://github.com/cotes2020/jekyll-theme-chirpy/commit/6900d9f2bc9380cbda4babf611c6eeff345291af))
-* force checkout of `gh-pages` branch ([#544](https://github.com/cotes2020/jekyll-theme-chirpy/issues/544)) ([5402523](https://github.com/cotes2020/jekyll-theme-chirpy/commit/5402523ae52a3740bcc15df0b226b2612644945d))
-* horizontal scroll for long equations ([#545](https://github.com/cotes2020/jekyll-theme-chirpy/issues/545)) ([30787fc](https://github.com/cotes2020/jekyll-theme-chirpy/commit/30787fc4cf151e955bb7afc26dfd859f1a06fce6))
-* p is not allowed in span ([4f590e2](https://github.com/cotes2020/jekyll-theme-chirpy/commit/4f590e2bba0639751771211bc0d357828ae70404))
-* remove whitespace from avatar URL ([#537](https://github.com/cotes2020/jekyll-theme-chirpy/issues/537)) ([0542b51](https://github.com/cotes2020/jekyll-theme-chirpy/commit/0542b5149c8287dca60e37f46ee36f31b43455e4))
-* resume the preview image SEO tag ([#529](https://github.com/cotes2020/jekyll-theme-chirpy/issues/529)) ([b8d1bcd](https://github.com/cotes2020/jekyll-theme-chirpy/commit/b8d1bcd3dea0abd1afef7ef154a4501fbb18938d))
-* script code should be in head or body, not in between ([2103191](https://github.com/cotes2020/jekyll-theme-chirpy/commit/2103191b2faf714a8e4418c7c347a1f942b51af8))
-* spurious header closing tags ([59e9557](https://github.com/cotes2020/jekyll-theme-chirpy/commit/59e955745f02f9b57c65af70b0979cd4a98bf53f))
-* table bypass refactoring when it contains IAL ([#519](https://github.com/cotes2020/jekyll-theme-chirpy/issues/519)) ([5d85ccb](https://github.com/cotes2020/jekyll-theme-chirpy/commit/5d85ccb9943aac88dbbefebe1c2234cdcbae5c53))
-* **theme mode:** `SCSS` syntax error ([#588](https://github.com/cotes2020/jekyll-theme-chirpy/issues/588)) ([76a1b6a](https://github.com/cotes2020/jekyll-theme-chirpy/commit/76a1b6a068c369138422dcd18ba08ec8cc3749a6))
-* use `jsonify` to generate valid json ([#521](https://github.com/cotes2020/jekyll-theme-chirpy/issues/521)) ([dd9d5a7](https://github.com/cotes2020/jekyll-theme-chirpy/commit/dd9d5a7207b746342d07176d8969dc4f2c380bf2))
-* when the `site.img_cdn` is set to the local path, the preview-image path loses the `baseurl` ([9cefe58](https://github.com/cotes2020/jekyll-theme-chirpy/commit/9cefe58993d9ea3a3a28424e7ffd8e0911567c5c))
+* add plugin-search-dir in prettier write for pnpm ([e49ca61](https://github.com/satnaing/astro-paper/commit/e49ca61d6b7048a8e8b2f50b1d947fd91eaca3eb)), ([37b54af](https://github.com/satnaing/astro-paper/commit/37b54afd9471eb35588e09f1f33ae1634732b02c)), closes [#34](https://github.com/satnaing/astro-paper/issues/34)
+* correct typo in blog posts ([cbce54b](https://github.com/satnaing/astro-paper/commit/cbce54bd1cf951c36a8603db8f7a8487481fc7f1)), closes [#35](https://github.com/satnaing/astro-paper/issues/35)
+* slugifyAll typo ([bcae985](https://github.com/satnaing/astro-paper/commit/bcae9856712773887664bb3a3392e1ebfd78607b))
+
+### Others
+
+* update Astro to v2.1.3 and enable type checking in dev ([329bc22](https://github.com/satnaing/astro-paper/commit/329bc22e97892e5687a841d580215c8fb2d44aa1))
+* add jampack for performance optimization ([#46](https://github.com/satnaing/astro-paper/pull/46)) ([b9254c1](https://github.com/satnaing/astro-paper/commit/b9254c15f1b382c2f3900b3371abce8975768dd9))
+
+## [2.1.0](https://github.com/satnaing/astro-paper/compare/v2.0.0...v2.1.0) (2023-02-08)
 
 
-### Improvements
+### Features
 
-* avoid post pageviews from shifting while loading ([135a16f](https://github.com/cotes2020/jekyll-theme-chirpy/commit/135a16f13ee783d9308669ff9a824847a73c951c))
-* avoid the layout shift for post datetime ([6d35f5f](https://github.com/cotes2020/jekyll-theme-chirpy/commit/6d35f5f8da044cfad071628bb53776de03efaae4))
-* **categories:** support singular and plural forms of locale ([#595](https://github.com/cotes2020/jekyll-theme-chirpy/issues/595)) ([35cadf9](https://github.com/cotes2020/jekyll-theme-chirpy/commit/35cadf969dd0161ee62503e242c545f006f7072b))
-* improve the responsive design for ultrawide screens ([#540](https://github.com/cotes2020/jekyll-theme-chirpy/issues/540)) ([5d6e8c5](https://github.com/cotes2020/jekyll-theme-chirpy/commit/5d6e8c5ef6aa71b4d2600c5305f6e8ba540557f7))
+* add ESLint and update linting errors ([#26](https://github.com/satnaing/astro-paper/issues/26)) ([a9631d0](https://github.com/satnaing/astro-paper/commit/a9631d0e1e65ac4339c6b4d806b3a17928fa2b62))
+
+
+### Bug Fixes
+
+* make schema(s) strict ([#23](https://github.com/satnaing/astro-paper/issues/23)) ([dc026b3](https://github.com/satnaing/astro-paper/commit/dc026b38defa760d77eddcddb1d4f12fdf8fff99))
+* fix typo and remove unnecessary comments ([#24](https://github.com/satnaing/astro-paper/pull/24)) ([d9a2ffe](https://github.com/satnaing/astro-paper/commit/d9a2ffe9096e2419a740c5b98b57323fbf2f2cb0)) ([#25](https://github.com/satnaing/astro-paper/pull/25)) ([29e0776](https://github.com/satnaing/astro-paper/commit/29e07761f78fa24b307601bf2272a61e084a468b))
+* update dependencies
+
+## [2.0.0](https://github.com/satnaing/astro-paper/compare/v1.4.0...v2.0.0) (2023-01-31)
+
+
+### ⚠ BREAKING CHANGES
+
+Check the AstroPaper v2 in [this blog post](https://astro-paper.pages.dev/posts/astro-paper-2/)
+
+* **deps:** Migration of Astro to version 2
+
+### Features
+
+* add Mastodon social link ([2ec3912](https://github.com/satnaing/astro-paper/commit/2ec39128c65fd0b1dafd6aebd48ac3068f40f9c5))
+* add new predefined color scheme 'astro dark' ([bc263b6](https://github.com/satnaing/astro-paper/commit/bc263b6eac00fbc8ec62481f2ec0317ee11bc83a))
+* define blog schema and add blog collection ([b420e68](https://github.com/satnaing/astro-paper/commit/b420e688ca3a197a7e4ea2591193fd09da817ec7))
+
+
+### Bug Fixes
+
+* add embedFont option for Satori ([9322123](https://github.com/satnaing/astro-paper/commit/93221239ddaebaa9ab183871cf978548ea8d0ea5))
+* exclude draft posts in specific tag page ([c192cd8](https://github.com/satnaing/astro-paper/commit/c192cd8e5042d4481bcb0d0389866cf4a969aa8d))
+* fix broken tags in PostDetails page ([a61fd45](https://github.com/satnaing/astro-paper/commit/a61fd455594932c66380a358b81b8bebb9d604cc))
+* fix typo in title and slug ([945acf4](https://github.com/satnaing/astro-paper/commit/945acf4260e0ea79bde8b180835049eda07d3e6a))
+* hide social links section if no link is active ([42eb018](https://github.com/satnaing/astro-paper/commit/42eb0188896a8475a7fbb894775e5500ca8b7d35)), closes [#16](https://github.com/satnaing/astro-paper/issues/16)
+* make the last part of breadcrumb lowercase in specific tag page ([c556202](https://github.com/satnaing/astro-paper/commit/c556202c972f1f9fed9af0ba6abf199e7deccc5f))
+* resolve initial onChange input value bug ([bf4f687](https://github.com/satnaing/astro-paper/commit/bf4f687d2d87cfeef96141c5324d02c37766845b))
+* update card bg color ([8a99601](https://github.com/satnaing/astro-paper/commit/8a99601e93f90c0870a22aa4a8ea8b7ff1b76a98))
+* use default-og for twitter card ([9434d85](https://github.com/satnaing/astro-paper/commit/9434d850e1f41f0802de5706c4c5712e5b5def9d))
+
+
+### build
+
+* **deps:** bump astro and its packages to v2 ([5f279b3](https://github.com/satnaing/astro-paper/commit/5f279b34f88bd94bed820d16c1e1d5e95859045f))
+
+## [1.4.0](https://github.com/satnaing/astro-paper/compare/v1.3.0...v1.4.0) (2022-12-28)
+
+
+### Features
+
+* generate dynamic og image for blog posts ([#15](https://github.com/satnaing/astro-paper/issues/15)) ([ce3f1dc](https://github.com/satnaing/astro-paper/commit/ce3f1dc4a0df8f196dce37de1c976870e9c97279))
+
+
+### Bug Fixes
+
+* fix grammar mistake ([02faff9](https://github.com/satnaing/astro-paper/commit/02faff9fbd4444144eeb139ae62850ec5a980dd3))
+
+## [1.3.0](https://github.com/satnaing/astro-paper/compare/v1.2.1...v1.3.0) (2022-12-07)
+
+
+### Features
+
+* update mobile nav to be accessible ([46ea4aa](https://github.com/satnaing/astro-paper/commit/46ea4aa49a49a3d21ca5ce1cee1b51f0108c13f0))
+
+### [1.2.1](https://github.com/satnaing/astro-paper/compare/v1.2.0...v1.2.1) (2022-12-02)
+
+
+### Bug Fixes
+
+* disable access to draft posts via url ([1c2821e](https://github.com/satnaing/astro-paper/commit/1c2821e4df65bee7126aed17244bb6590b1163d8))
+* display '0 results' instead of '0 result' in Search ([eceb289](https://github.com/satnaing/astro-paper/commit/eceb2895623cffefc65671fdfc343fa5e4c01cdb))
+* displays featured section only if featured posts exist ([e0f93da](https://github.com/satnaing/astro-paper/commit/e0f93dab02024d65ddb69925a21e8d8598a036e9))
+* fix calculating draft posts in totalPages ([19e34a0](https://github.com/satnaing/astro-paper/commit/19e34a0801019df8681d1d4e80f678989cf2457c))
+* hide pagination when there's only 1 page ([6b35c7f](https://github.com/satnaing/astro-paper/commit/6b35c7fc2f63bb16aaefc140029b1eae1235cc44))
+
+## [1.2.0](https://github.com/satnaing/astro-paper/compare/v1.1.3...v1.2.0) (2022-11-28)
+
+
+### Features
+
+* improve accessibility including voiceover ([5860254](https://github.com/satnaing/astro-paper/commit/5860254ea99996e466f2e521f033763961b6faa6))
+* add linkTitle in social links ([c9f796f](https://github.com/satnaing/astro-paper/commit/c9f796f4e63f1cf6b32b7874ae5e3810598a230c))
+
+
+### Updates
+
+* move toggle theme codes from `layouts/Layout.astro` to `toggle-theme.js` ([5860254](https://github.com/satnaing/astro-paper/commit/5860254ea99996e466f2e521f033763961b6faa6))
+* delete `utils/formatDatetime.ts` and replaced with `FormattedDatetime` inside `components/Datetime.tsx` ([0eeed8e](https://github.com/satnaing/astro-paper/commit/0eeed8e870781d9b4a447c51e3055ccb2f359d8a))
+* 'toggling light and dark mode' code is remove from `src/components/Header.astro` and is rewritten in `public/toggle-theme.js` file. ([2ba459b](https://github.com/satnaing/astro-paper/commit/2ba459b4131a11a68a5fd818a278c474c1888cde)) ([0eeed8e](https://github.com/satnaing/astro-paper/commit/0eeed8e870781d9b4a447c51e3055ccb2f359d8a))
+* update previous and next button disabled state ([408fc4c](https://github.com/satnaing/astro-paper/commit/408fc4c7aa5a246fe82a6e85d119b36ee1f1ffc3))
+* **typo:** rename Linkedin to LinkedIn ([307b55f](https://github.com/satnaing/astro-paper/commit/307b55ff0f6cb86a4fa4152c635d6acb39d1512f))
+* update patch and minor dependencies ([3b0ab75](https://github.com/satnaing/astro-paper/commit/3b0ab7555f506a8a0b825ca9691fdb221e481adb)) ([c3a6e4e](https://github.com/satnaing/astro-paper/commit/c3a6e4e81d1f79efc17d451486ff560dccb8ddf0))
+
+### [1.1.3](https://github.com/satnaing/astro-paper/compare/v1.1.2...v1.1.3) (2022-11-11)
+
+
+### Bug Fixes
+
+* fix broken post links and hide draft posts in rss feed ([b83c906](https://github.com/satnaing/astro-paper/commit/b83c906262cb5e1f045ac50f2401527c0b64074c))
+
+### [1.1.2](https://github.com/satnaing/astro-paper/compare/v1.1.1...v1.1.2) (2022-11-04)
+
+
+### Bug Fixes
+
+* fix heading style in posts/<page-num> layouts ([5eeea66](https://github.com/satnaing/astro-paper/commit/5eeea6639e79f93c3d0917bc827dfd37a23d041c))
+* fix missing TailwindCSS dependency ([e7807ab](https://github.com/satnaing/astro-paper/commit/e7807ab94e12898ab85b955132c5d908956c8945)), closes [#6](https://github.com/satnaing/astro-paper/issues/6)
+* show search result only if input is more than one char ([f7fb032](https://github.com/satnaing/astro-paper/commit/f7fb032e604bd704adc19400e000c9584a6fdb43))
+
+### [1.1.1](https://github.com/satnaing/astro-paper/compare/v1.1.0...v1.1.1) (2022-10-30)
+
+
+### Updates
+
+* update github-slugger by @AkaraChen in https://github.com/satnaing/astro-paper/pull/5
+* move '@types/react' to dev dependencies ([3697a59](https://github.com/satnaing/astro-paper/commit/3697a59f1ab8b58af7d41c2ef4aa8ba97b9ad1e2))
+* update dependencies
+
+## [1.1.0](https://github.com/satnaing/astro-paper/compare/v1.0.1...v1.1.0) (2022-10-18)
+
+### Features
+
+* improve search functionality ([33bab9c](https://github.com/satnaing/astro-paper/commit/33bab9c489d74e1b53109d5f1e8f3586cfcb9433))
+* add CHANGELOG ([adb331e](https://github.com/satnaing/astro-paper/commit/adb331e219d122be696fb390ae41f0afaa5a76b9))
+* add prettier and husky ([d6dd818](https://github.com/satnaing/astro-paper/commit/d6dd8185f28cfae967cf90c9020580ebce5c36fd) | [80aee6b](https://github.com/satnaing/astro-paper/commit/80aee6bedbc1e40650411b0695f5365902d3b9e2))
+
+### Bug Fixes
+
+* fix markdown lint warnings by updating headers ([ad14dc5](https://github.com/satnaing/astro-paper/commit/ad14dc580fbf886f5de95705ec7910c7c3b46bf0))
+* fix markdown warnings by adding alt texts ([3260641](https://github.com/satnaing/astro-paper/commit/326064111cbb7d356659252dd7ddd42dbd2d7e56))
+* extract Social component to avoid duplication ([7ef631f](https://github.com/satnaing/astro-paper/commit/7ef631fe35dc57db1c84e7c3c92969fa23ccd42b))
+* update glob to have access to sub directories under content/ ([a256ded](https://github.com/satnaing/astro-paper/commit/a256dedb73aaf018cedf764f38843ad176b27058))
+
+## [1.0.1](https://github.com/satnaing/astro-paper/compare/v1.0.0...v1.0.1) (2022-09-27) Initial Release
+
+### Features
+
+- Fully responsive & accessible
+- Pagination & draft post
+- Light & dark color schemes
+- 19 social link icons
+- Fuzzy search
+- Sitemap & RSS feed
+- 5 predefined themes
