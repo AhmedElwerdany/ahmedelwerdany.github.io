@@ -3,9 +3,9 @@ import type { Site, SocialObjects } from "./types";
 export const SITE: Site = {
   website: "https://ahmedelwerdany.github.io", // replace this with your deployed domain
   author: "Ahmed Elwerdany",
-  desc: "A minimal, responsive and SEO-friendly Astro blog theme.",
+  desc: "Dive into code’s depths, decipher Rust and JavaScript. Equip tools, hunt bugs. Knowledge and skill defeat boredom.",
   title: "Xcoder7",
-  ogImage: "astropaper-og.jpg",
+  //ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
   postPerPage: 10,
 };
